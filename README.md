@@ -37,3 +37,6 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 ---
 
 Happy coding!
+
+
+[Title](https://stackoverflow.com/questions/30788245/disable-and-enable-click-after-toggleclass)
