@@ -4,6 +4,10 @@ from django.db import models
 
 
 class Category(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Categories',
+
     name = models.CharField(max_length=100)
     friendly_name = models.CharField(max_length=100)
 
@@ -12,6 +16,10 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Products',
+
     name = models.CharField(max_length=100)
     sku = models.CharField(max_length=254, null=True, blank=True)
     description = models.TextField()
