@@ -1,0 +1,72 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001340155",
+      "name": "Whitening Strips",
+      "description": "Advanced teeth whitening strips for a brighter smile. Easy to use and effective. Contains 20 whitening strips. Results visible within a week.",
+      "price": 29.99,
+      "category": 1,
+      "rating": 4.5,
+      "image": "/media/whitening-strips.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/81wAqU1eGhL._AC_SL1500_.jpg"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001600425",
+      "name": "Whitening Toothpaste",
+      "description": "Powerful whitening toothpaste that removes stains and brightens your teeth. Fluoride formula for strong teeth and fresh breath. Available in various flavors.",
+      "price": 9.99,
+      "category": 2,
+      "rating": 4.2,
+      "image": "whitening-toothpaste.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/71hwOHK8vWL._AC_SL1500_.jpg"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001730010",
+      "name": "Whitening Kit",
+      "description": "Complete teeth whitening kit for professional results at home. Includes whitening gel, trays, LED light, and instructions. Safe and effective.",
+      "price": 59.99,
+      "category": 3,
+      "rating": 4.7,
+      "image": "whitening-kit.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/71r8fCQrRDL._SL1500_.jpg"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001890157",
+      "name": "Whitening Gel",
+      "description": "High-quality teeth whitening gel for use with custom trays. Professional strength formula for maximum results. Safe for enamel.",
+      "price": 39.99,
+      "category": 4,
+      "rating": 4.3,
+      "image": "whitening-gel.jpg",
+      "image_url": "https://www.dentaworks.se/upload/product_images/647-dentaworks-tooth-whitening-gel.webp"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5002111605",
+      "name": "Whitening Pen",
+      "description": "Convenient teeth whitening pen for on-the-go use. Easy application for touch-ups and maintaining a bright smile. Compact and travel-friendly.",
+      "price": 19.99,
+      "category": 5,
+      "rating": 4.0,
+      "image": "whitening-pen.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/71BTo6WO8tL._AC_SL1500_.jpg"
+    }
+  }
+]

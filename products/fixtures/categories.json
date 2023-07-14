@@ -1,0 +1,42 @@
+[
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+          "name": "whitening_strips",
+          "friendly_name": "Whitening Strip"
+        }
+      },
+      {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+          "name": "whitening_toothpaste",
+          "friendly_name": "Whitening Toothpaste"
+        }
+      },
+      {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+          "name": "whitening_kits",
+          "friendly_name": "Whitening Kits"
+        }
+      },
+      {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+          "name": "whitening_gels",
+          "friendly_name": "Whitening Gels"
+        }
+      },
+      {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+          "name": "whitening_pens",
+          "friendly_name": "Whitening Pens"
+        }
+      }
+]
