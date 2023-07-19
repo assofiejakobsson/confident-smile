@@ -1,0 +1,12 @@
+/* body {
+    background-color: aqua;
+    background: url('{% static "images/homepage_background.jpg" %}') no-repeat center center fixed; 
+} */
+
+
+
+/* 
+#image-background-home {
+    background: url('{% static "images/homepage_background.jpg" %}') no-repeat center center fixed;  
+    background-color: aqua; 
+}   */
