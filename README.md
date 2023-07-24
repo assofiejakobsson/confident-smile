@@ -43,3 +43,7 @@ Happy coding!
 
 
 json formater [Title](https://jsonformatter.org/?utm_content=cmp-true)
+
+
+Bug: 
+"In the bag/urls.py file, I have named the view_bag URL pattern to just bag. This can be a bit confusing for someone working with the code. It's currently working, but this is something that I have to change for better code organization."
