@@ -3,7 +3,9 @@
     background: url('{% static "images/homepage_background.jpg" %}') no-repeat center center fixed; 
 } */
 
-
+/* body {
+    background-color: aqua;
+} */
 
 /* 
 #image-background-home {
@@ -29,6 +31,20 @@
     color: white !important;
 }
 
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
 
 
 .btt-button {
