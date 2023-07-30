@@ -1,0 +1,50 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>{% block head_title %}{% endblock %}</title>
+    {% block extra_head %}
+    {% endblock %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0-beta3/css/bootstrap.min.css">
+</head>
+<body>
+    {% block body %}
+
+    {% if messages %}
+    <div class="container">
+        <div class="alert alert-primary" role="alert">
+            <strong>Messages:</strong>
+            <ul class="list-unstyled">
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="container">
+        <strong>Menu:</strong>
+        <ul class="list-unstyled">
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'account_email' %}" class="nav-link">Change E-mail</a></li>
+            <li><a href="{% url 'account_logout' %}" class="nav-link">Sign Out</a></li>
+            {% else %}
+            <li><a href="{% url 'account_login' %}" class="nav-link">Sign In</a></li>
+            <li><a href="{% url 'account_signup' %}" class="nav-link">Sign Up</a></li>
+            {% endif %}
+        </ul>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+    {% endblock %}
+
+    {% block extra_body %}
+    {% endblock %}
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0-beta3/js/bootstrap.min.js"></script>
+</body>
+</html>
+ -->
