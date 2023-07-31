@@ -70,11 +70,18 @@
                                                     <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
                                                 </a>
                                             {% endfor %}
-                                                                        {% if product.rating %}
+                                                {% if product.rating %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
+                                            {% if request.user.is_superuser %}
+                                                <small class="ml-3">
+                                                    <a class="btn btn-primary btn-sm" href="{% url 'products:edit_product' product.id %}">Edit</a>  
+                                                    <a class="btn btn-danger btn-sm" href="{% url 'products:delete_product' product.id %}">Delete</a>
+                                                </small>
+                                            {% endif %}
+
                                         </div>
                                     </div>
                                 </div>
