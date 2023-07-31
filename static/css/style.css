@@ -1,11 +1,11 @@
 /* body {
     background-color: aqua;
     background: url('{% static "images/homepage_background.jpg" %}') no-repeat center center fixed; 
-} */
-
-/* body {
+} 
+ */
+body {
     background-color: aqua;
-} */
+} 
 
 /* 
 #image-background-home {
@@ -17,6 +17,12 @@
     background: #212529 !important;
     color: #fff !important;
 }  */
+
+.container-fluid {
+    background-color: gainsboro;
+}
+
+
 
 .btn-outline-black {
     background: white;
