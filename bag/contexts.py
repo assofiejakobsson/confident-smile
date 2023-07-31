@@ -31,7 +31,7 @@ def bag_contents(request):
         delivery = 0
         free_delivery_delta = 0  """
 
-    delivery = Decimal('10.00')
+    delivery = Decimal('00.00')
     
     grand_total = delivery + total 
     
