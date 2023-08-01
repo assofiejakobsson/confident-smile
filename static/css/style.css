@@ -3,9 +3,16 @@
     background: url('{% static "images/homepage_background.jpg" %}') no-repeat center center fixed; 
 } 
  */
+
 body {
-    background-color: aqua;
-} 
+    background-image: linear-gradient(to top, #98dff6, #5fcafb, #1ab2ff, #0096ff, #4176f8);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 /* 
 #image-background-home {
@@ -18,9 +25,6 @@ body {
     color: #fff !important;
 }  */
 
-.container-fluid {
-    background-color: gainsboro;
-}
 
 
 

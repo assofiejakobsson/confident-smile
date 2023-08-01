@@ -5,11 +5,11 @@
     "fields": {
       "sku": "pp5001340155",
       "name": "Whitening Strips",
-      "description": "Advanced teeth whitening strips for a brighter smile. Easy to use and effective. Contains 20 whitening strips. Results visible within a week.",
+      "description": "Experience the power of natural ingredients with our organic teeth whitening strips. Made for a brighter smile, these easy-to-use strips are effective and offer visible results within a week. Each pack contains 20 strips, all carefully formulated with organic, fluoride-free ingredients that work gently on your teeth. Enjoy a healthy, radiant smile without compromising on the health of your mouth. Ingredients: Carbamide peroxide, Glycerin, Carbomer, Peppermint oil, Potassium nitrate",
       "price": 29.99,
       "category": 1,
       "rating": 4.5,
-      "image": "/media/whitening-strips.jpg",
+      "image": "whitening-strips.jpg",
       "image_url": "https://m.media-amazon.com/images/I/81wAqU1eGhL._AC_SL1500_.jpg"
     }
   },
@@ -19,7 +19,7 @@
     "fields": {
       "sku": "pp5001600425",
       "name": "Whitening Toothpaste",
-      "description": "Powerful whitening toothpaste that removes stains and brightens your teeth. Fluoride formula for strong teeth and fresh breath. Available in various flavors.",
+      "description": "Unleash the strength of nature with our powerful whitening toothpaste. Designed to eliminate stains and enhance the brightness of your teeth, this toothpaste is crafted from organic, fluoride-free ingredients. It ensures the robust health of your teeth and maintains fresh breath. It's also available in a variety of natural flavors for a unique brushing experience. Ingredients Carbamide peroxide, Glycerin, Carbomer, Peppermint oil, Potassium nitrate",
       "price": 9.99,
       "category": 2,
       "rating": 4.2,
@@ -33,7 +33,7 @@
     "fields": {
       "sku": "pp5001730010",
       "name": "Whitening Kit",
-      "description": "Complete teeth whitening kit for professional results at home. Includes whitening gel, trays, LED light, and instructions. Safe and effective.",
+      "description": "Experience professional-level teeth whitening at the comfort of your home with our complete teeth whitening kit. This kit is meticulously assembled with an organic, cruelty-free whitening gel, trays, LED light, and comprehensive instructions. It ensures safe and effective results, helping you achieve a dazzling smile naturally. Ingredients Carbamide peroxide, Glycerin, Carbomer, Peppermint oil, Potassium nitrate",
       "price": 59.99,
       "category": 3,
       "rating": 4.7,
@@ -47,7 +47,7 @@
     "fields": {
       "sku": "pp5001890157",
       "name": "Whitening Gel",
-      "description": "High-quality teeth whitening gel for use with custom trays. Professional strength formula for maximum results. Safe for enamel.",
+      "description": "Discover the potential of our high-quality teeth whitening gel designed for use with custom trays. Its professional-strength formula, enriched with organic, cruelty-free, and fluoride-free ingredients, ensures optimal results while being safe for your enamel. Experience a significant difference in the brightness of your smile without compromising on safety. Ingredients Carbamide peroxide, Glycerin, Carbomer, Peppermint oil, Potassium nitrate",
       "price": 39.99,
       "category": 4,
       "rating": 4.3,
@@ -61,7 +61,7 @@
     "fields": {
       "sku": "pp5002111605",
       "name": "Whitening Pen",
-      "description": "Convenient teeth whitening pen for on-the-go use. Easy application for touch-ups and maintaining a bright smile. Compact and travel-friendly.",
+      "description": "Introducing our handy teeth whitening pen, your perfect companion for on-the-go use. Formulated with organic, cruelty-free, and fluoride-free ingredients, it offers an easy application process for touch-ups, ensuring your smile stays bright wherever you go. Its compact, travel-friendly design means a confident smile is always within reach. Ingredients Carbamide peroxide, Glycerin, Carbomer, Peppermint oil, Potassium nitrate",
       "price": 19.99,
       "category": 5,
       "rating": 4.0,

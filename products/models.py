@@ -25,8 +25,11 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
     image = models.ImageField(upload_to='products/')
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
     rating = models.DecimalField(max_digits=3, decimal_places=1)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    
+    
 
     def __str__(self):
         return self.name
