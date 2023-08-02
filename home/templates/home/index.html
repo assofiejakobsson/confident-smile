@@ -1,16 +1,36 @@
 {% extends "base.html" %}
+{% load widget_tweaks %}
 {% load static %}
 
 {% block content %}
-    <div class="container h-100" id="image-background-home">
-        <div class="row h-100 align-items-center justify-content-center text-center">
-            <div class="col-10 col-md-8 my-auto">
+        <div class="container h-100" id="image-background-home">
+            <div class="row h-100 align-items-center justify-content-center text-center">
+                <div class="col-10 col-md-8 my-auto">
+            
                 <h1 class="mb-4">Welcome to Confident Smile</h1>
                 <p class="mb-5">We provide a range of organic, fluoride-free teeth whitening products that are both effective and gentle on your gums. Our mission is to deliver top-notch dental care products directly to you, ensuring that your smile is always at its best.</p>
                 <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products:products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                    </h4>
+                <h4>
+                    <a href="{% url 'products:products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                </h4>
+                <div class="my-5">
+                    <h3>Stay Connected!</h3>
+                    <p>Subscribe to our newsletter and be the first to know about our latest products, discounts, and much more.</p>
+                    <form method="POST" action="{% url 'home:subscribe' %}" class="row gy-2 gx-3 align-items-center justify-content-center">
+                        {% csrf_token %}
+                        <div class="col-auto">
+                            {% render_field form.email class+="form-control" %}
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </div>
+                        {% if form.email.errors %}
+                            <div class="form-errors">
+                                <p>{{ form.email.errors|first }}</p>
+                            </div>
+                        {% endif %}
+                    </form>
+                    
                 </div>
             </div>
         </div>

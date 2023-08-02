@@ -32,8 +32,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-assofiejako-confidentsm-u7dpispt60t.ws-eu101.gitpod.io',
-    '8000-assofiejako-confidentsm-u7dpispt60t.ws-eu102.gitpod.io' 
-    'assofiejakobsson-confident_smile.herokuapp.com', 'localhost'
+    '8000-assofiejako-confidentsm-u7dpispt60t.ws-eu102.gitpod.io',
+    '8000-assofiejako-confidentsm-u7dpispt60t.ws-eu102.gitpod.io', 
+    'assofiejakobsson-confident_smile.herokuapp.com', 'localhost',
 ]
 
 
