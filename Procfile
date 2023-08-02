@@ -1,0 +1,1 @@
+web: gunicorn confident_smile.wsgi:application
