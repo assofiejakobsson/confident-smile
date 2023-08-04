@@ -1,9 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import UserProfile
+from .models import UserProfile, Wishlist
 from .forms import UserProfileForm
 from checkout.models import Order
+from products.models import Product
 
 
 
@@ -80,7 +81,52 @@ def order_history(request, order_number):
     return render(request, template, context)
 
 
+@login_required
+def view_wishlist(request):
+    user_profile = UserProfile.objects.get(user=request.user)
+    wishlist, created = Wishlist.objects.get_or_create(user=user_profile)
+    return render(request, 'profiles/wishlist.html', {'wishlist': wishlist})
 
+@login_required
+def add_to_wishlist(request, product_id):
+    user_profile = UserProfile.objects.get(user=request.user)
+    wishlist, created = Wishlist.objects.get_or_create(user=user_profile)
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist.products.add(product)
+    return redirect('profiles:view_wishlist')
+
+@login_required
+def remove_from_wishlist(request, product_id):
+    user_profile = UserProfile.objects.get(user=request.user)
+    wishlist, created = Wishlist.objects.get_or_create(user=user_profile)
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist.products.remove(product)
+    return redirect('profiles:view_wishlist')
+
+
+""" 
+@login_required
+def view_wishlist(request):
+    user_profile = UserProfile.objects.get(user=request.user)
+    wishlist = Wishlist.objects.get(user=user_profile)
+    return render(request, 'profiles/wishlist.html', {'wishlist': wishlist})
+
+@login_required
+def add_to_wishlist(request, product_id):
+    user_profile = UserProfile.objects.get(user=request.user)
+    wishlist = Wishlist.objects.get(user=user_profile)
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist.products.add(product)
+    return redirect('profiles:view_wishlist')
+
+@login_required
+def remove_from_wishlist(request, product_id):
+    user_profile = UserProfile.objects.get(user=request.user)
+    wishlist = Wishlist.objects.get(user=user_profile)
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist.products.remove(product)
+    return redirect('profiles:view_wishlist')
+ """
 
 """ from django.shortcuts import render, get_object_or_404
 from django.contrib import messages

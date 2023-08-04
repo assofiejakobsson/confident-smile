@@ -95,6 +95,7 @@
               {% endif %}
           {% endwith %}
       {% endfor %}
+      
   </div>
   {% endif %}
 
@@ -104,7 +105,7 @@
     {% block content %}
     {% endblock %}
   </main>
-
+<!-- 
   <div id="mc_embed_shell">
     <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     <div id="mc_embed_signup">
@@ -145,17 +146,23 @@
     </div>
 </div>
 
-
+ -->
 
 
 
   {% include 'includes/footer.html' %}
 
+
   {% block postloadjs %}
-  <script type="text/javascript">
-      $('.toast').toast('show');
-  </script>
-  {% endblock %}
+    <script type="text/javascript">
+        var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+        var toastList = toastElList.map(function(toastEl) {
+            return new bootstrap.Toast(toastEl)
+        })
+        toastList.forEach(toast => toast.show()); 
+    </script>
+{% endblock %}
+
 
   <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
   <script type="text/javascript">

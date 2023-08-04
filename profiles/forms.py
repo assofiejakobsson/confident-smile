@@ -1,5 +1,7 @@
 from django import forms
-from .models import UserProfile, create_or_update_user_profile
+from .models import UserProfile
+
+""" from .models import UserProfile, create_or_update_user_profile """
 
 
 class UserProfileForm(forms.ModelForm):

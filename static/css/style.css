@@ -91,47 +91,48 @@ footer a {
 /*mailchimp goes here */
 
 
-    /* Adjust the form width based on the container size */
-    #mc_embed_signup {
-        max-width: 600px;
-        margin: 0 auto;
-    }
+/* Adjust the form width based on the container size */
+#mc_embed_signup {
+    max-width: 600px;
+    margin: 0 auto;
+}
 
-    /* Center the form header */
-    #mc_embed_signup h2 {
-        text-align: center;
-    }
+/* Center the form header */
+#mc_embed_signup h2 {
+    text-align: center;
+}
 
-    /* Add spacing between form elements */
-    #mc_embed_signup .form-group {
-        margin-bottom: 15px;
-    }
+/* Add spacing between form elements */
+#mc_embed_signup .form-group {
+    margin-bottom: 15px;
+    max-width: 300px;
+}
 
-    /* Style the input field */
-    #mc_embed_signup input[type="email"] {
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        border-radius: 4px;
-        border: 1px solid #ccc;
-    }
+/* Style the input field */
+#mc_embed_signup input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
 
-    /* Style the submit button */
-    #mc_embed_signup input[type="submit"] {
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        border-radius: 4px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-    }
+/* Style the submit button */
+#mc_embed_signup input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
 
-    /* Add some space around the subscribe button */
-    #mc_embed_signup .optionalParent {
-        margin-top: 15px;
-    }
+/* Add some space around the subscribe button */
+#mc_embed_signup .optionalParent {
+    margin-top: 15px;
+}
 
 /* Style the referral badge image */
 #mc_embed_signup .refferal_badge {
