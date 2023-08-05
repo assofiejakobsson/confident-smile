@@ -184,6 +184,22 @@
       }(jQuery));
       var $mcj = jQuery.noConflict(true);
   </script>
+   
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      let faqQuestions = document.querySelectorAll('.faq-question');
+      faqQuestions.forEach((faqQuestion) => {
+        faqQuestion.addEventListener('click', function() {
+          let faqAnswer = this.nextElementSibling;
+          faqAnswer.style.display = faqAnswer.style.display === 'none' ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
+
+
+
 
 </body>
 </html>

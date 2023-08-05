@@ -1,0 +1,9 @@
+<h5 class="text-uppercase">FAQs</h5>
+<div id="faqContainer">
+  {% for faq in faqs %}
+    <div class="faq-item">
+      <p><strong class="faq-question" style="cursor:pointer;">{{ faq.question }}</strong></p>
+      <p class="faq-answer" style="display:none;">{{ faq.answer }}</p>
+    </div>
+  {% endfor %}
+</div>

@@ -29,7 +29,6 @@ class Product(models.Model):
     rating = models.DecimalField(max_digits=3, decimal_places=1)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     
-    
 
     def __str__(self):
-        return self.name
+        return self.name 

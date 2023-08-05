@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'widget_tweaks',
     'storages',
+    'siteinfo',
 ]
 
 MIDDLEWARE = [
@@ -95,6 +96,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'bag.contexts.bag_contents',
+                'siteinfo.context_processors.faqs',
             ],
             
             'builtins': [
