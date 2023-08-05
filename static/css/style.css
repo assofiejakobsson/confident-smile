@@ -15,6 +15,16 @@ body {
     min-height: 100vh;
 }
 
+h1, h2, h3, h4, a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
 footer {
     margin-top: auto;    
 }
@@ -39,6 +49,78 @@ footer a {
 
 
 
+.shop-now-button {
+    
+    color: black;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
+
+
+/* .btn btn-black rounded-0 {
+    background: white;
+    color: black !important; 
+    border: 1px solid black;
+}
+
+.btn btn-black rounded-0:hover,
+.btn btn-black rounded-0:active,
+.btn btn-black rounded-0:focus {
+    background: black;
+    color: white !important;
+}
+
+
 .btn-outline-black {
     background: white;
     color: black !important; 
@@ -50,7 +132,7 @@ footer a {
 .btn-outline-black:focus {
     background: black;
     color: white !important;
-}
+} */
 
 .message-container {
     position: fixed;
