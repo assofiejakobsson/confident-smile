@@ -1,12 +1,27 @@
- 
+<li class="list-inline-item dropdown">
+    <a class="text-black nav-link d-block d-lg-none" href="#" id="home-options" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="text-center">
+            <div><i class="fas fa-home fa-lg"></i></div>
+            <p class="my-0">Menu</p>
+        </div>
+    </a>
+    <ul class="dropdown-menu border-0" aria-labelledby="home-options">
+        <li><a href="{% url 'home:home' %}" class="dropdown-item">Home</a></li>
+    </ul>
+</li>
+
 <li class="list-inline-item">
+    
     <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
         <div class="text-center">
             <div><i class="fas fa-search fa-lg"></i></div>
             <p class="my-0">Search</p>
         </div>
     </a>
+    
     <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
+    
         <form class="form" method="GET" action="{% url 'products:products' %}">
             <div class="input-group w-100">
                 <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search">
