@@ -14,7 +14,7 @@
                     <a href="{% url 'products:products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
                 </h4>
                 
-  <div id="mc_embed_shell">
+  <!-- <div id="mc_embed_shell">
     <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     <div id="mc_embed_signup">
         <form action="https://herokuapp.us9.list-manage.com/subscribe/post?u=77485953b7bd0cae9849c6a5e&amp;id=bd7ef7cf72&amp;f_id=008113e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
@@ -52,10 +52,10 @@
             </div>
         </form>
     </div>
-</div>
+</div> -->
 
 
-                <!--<div class="my-5">
+              <!--   <div class="my-5">
                     <h3>Stay Connected!</h3>
                     <p>Subscribe to our newsletter and be the first to know about our latest products, discounts, and much more.</p>
                     <form method="POST" action="{% url 'home:subscribe' %}" class="row gy-2 gx-3 align-items-center justify-content-center">
@@ -71,11 +71,38 @@
                                 <p>{{ form.email.errors|first }}</p>
                             </div>
                         {% endif %}
-                    </form> -->
+                    </form> 
                     
                   
                     
+                </div> -->
+
+                <div class="my-5">
+                    <h3>Stay Connected!</h3>
+                    <p>Subscribe to our newsletter and be the first to know about our latest products, discounts, and much more.</p>
+                    {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <form method="POST" action="{% url 'home:subscribe' %}" class="row gy-2 gx-3 align-items-center justify-content-center">
+                        {% csrf_token %}
+                        <div class="col-auto">
+                            {% render_field form.email class+="form-control" %}
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </div>
+                        {% if form.email.errors %}
+                            <div class="form-errors">
+                                <p>{{ form.email.errors|first }}</p>
+                            </div>
+                        {% endif %}
+                    </form>
                 </div>
+                
             </div>
         </div>
     </div>

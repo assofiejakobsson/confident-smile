@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile, Wishlist
 from .forms import UserProfileForm
+from products.models import Product 
 from checkout.models import Order
 from products.models import Product
 

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import NewsletterUserForm
+from django.contrib import messages
 
 
 # Create your views here.
@@ -17,10 +18,22 @@ def subscribe(request):
         form = NewsletterUserForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Successfully subscribed to the newsletter!')
             return redirect('home:home')
     else:
         form = NewsletterUserForm()
-    return render(request, 'home/index.html', {'form': form}) 
+    return render(request, 'home/index.html', {'form': form})
+
+""" 
+def subscribe(request):
+    if request.method == 'POST':
+        form = NewsletterUserForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home:home')
+    else:
+        form = NewsletterUserForm()
+    return render(request, 'home/index.html', {'form': form})  """
 
 
 
