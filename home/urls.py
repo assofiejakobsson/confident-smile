@@ -7,5 +7,5 @@ app_name = 'home'
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('subscribe/', views.subscribe, name='subscribe'),
+    #path('subscribe/', views.subscribe, name='subscribe'),
 ]
