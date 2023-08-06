@@ -2,108 +2,67 @@
 {% load widget_tweaks %}
 {% load static %}
 
+
 {% block content %}
-        <div class="container h-100" id="image-background-home">
-            <div class="row h-100 align-items-center justify-content-center text-center">
-                <div class="col-10 col-md-8 my-auto">
-            
-                <h1 class="mb-4">Welcome to Confident Smile</h1>
-                <p class="mb-5">We provide a range of organic, fluoride-free teeth whitening products that are both effective and gentle on your gums. Our mission is to deliver top-notch dental care products directly to you, ensuring that your smile is always at its best.</p>
-                <div class="my-5">
-                <h4>
-                    <a href="{% url 'products:products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                </h4>
-                
-    <div id="mc_embed_shell">
-    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-    <div id="mc_embed_signup">
-        <form action="https://herokuapp.us9.list-manage.com/subscribe/post?u=77485953b7bd0cae9849c6a5e&amp;id=bd7ef7cf72&amp;f_id=008113e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-            <div id="mc_embed_signup_scroll">
-                <h3>Stay Connected!</h3>
-                    <p>Subscribe to our newsletter and be the first to know about our latest products, discounts, and much more.</p>
-                <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-                <div class="form-group">
-                    <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
-                    <input type="email" name="EMAIL" class="required email form-control" id="mce-EMAIL" required="" value="">
-                    <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-                </div>
-                <div class="form-group">
-                    <div id="mce-responses" class="clear foot">
-                        <div class="response" id="mce-error-response" style="display: none;"></div>
-                        <div class="response" id="mce-success-response" style="display: none;"></div>
-                    </div>
-                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                        
-                        <input type="text" name="b_77485953b7bd0cae9849c6a5e_bd7ef7cf72" tabindex="-1" value="">
-                    </div>
-                </div>
-                <div class="form-group optionalParent">
-                    <div class="clear foot">
-                        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary" value="Subscribe">
-                        <p style="margin: 0px auto;">
-                            <a href="http://eepurl.com/iw54l-" title="Mailchimp - email marketing made easy and fun">
-                                <span style="display: inline-block; background-color: transparent; border-radius: 4px;">
-                                    <img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;">
-                                </span>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>  
-
-
-              <!--   <div class="my-5">
-                    <h3>Stay Connected!</h3>
-                    <p>Subscribe to our newsletter and be the first to know about our latest products, discounts, and much more.</p>
-                    <form method="POST" action="{% url 'home:subscribe' %}" class="row gy-2 gx-3 align-items-center justify-content-center">
-                        {% csrf_token %}
-                        <div class="col-auto">
-                            {% render_field form.email class+="form-control" %}
-                        </div>
-                        <div class="col-auto">
-                            <button type="submit" class="btn btn-primary">Subscribe</button>
-                        </div>
-                        {% if form.email.errors %}
-                            <div class="form-errors">
-                                <p>{{ form.email.errors|first }}</p>
-                            </div>
-                        {% endif %}
-                    </form> 
-                    
-                  
-                    
-                </div> -->
-<!-- 
-                <div class="my-5">
-                    <h3>Stay Connected!</h3>
-                    <p>Subscribe to our newsletter and be the first to know about our latest products, discounts, and much more.</p>
-                    {% if messages %}
-                        <ul class="messages">
-                            {% for message in messages %}
-                                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-                    <form method="POST" action="{% url 'home:subscribe' %}" class="row gy-2 gx-3 align-items-center justify-content-center">
-                        {% csrf_token %}
-                        <div class="col-auto">
-                            {% render_field form.email class+="form-control" %}
-                        </div>
-                        <div class="col-auto">
-                            <button type="submit" class="btn btn-primary">Subscribe</button>
-                        </div>
-                        {% if form.email.errors %}
-                            <div class="form-errors">
-                                <p>{{ form.email.errors|first }}</p>
-                            </div>
-                        {% endif %}
-                    </form>
-                </div>
-                
-            </div>
+  <!-- Main Container -->
+  <div class="container h-100" id="image-background-home">
+    <!-- Centered Row -->
+    <div class="row h-100 align-items-center justify-content-center text-center">
+      <!-- Main Content Column -->
+      <div class="col-10 col-md-8 my-auto">
+        <h1 class="mb-4">Welcome to Confident Smile</h1>
+        <p class="mb-5">We provide a range of organic, fluoride-free teeth whitening products that are both effective and gentle on your gums. Our mission is to deliver top-notch dental care products directly to you, ensuring that your smile is always at its best.</p>
+        <!-- Shop Now Button -->
+        <div class="my-5">
+          <h4>
+            <a href="{% url 'products:products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+          </h4>
         </div>
+        <!-- Mailchimp Signup Form -->
+        <div id="mc_embed_shell">
+          <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+          <div id="mc_embed_signup">
+            <form action="https://herokuapp.us9.list-manage.com/subscribe/post?u=77485953b7bd0cae9849c6a5e&amp;id=bd7ef7cf72&amp;f_id=008113e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+              <div id="mc_embed_signup_scroll">
+                <h3>Stay Connected!</h3>
+                <p>Subscribe to our newsletter and be the first to know about our latest products, discounts, and much more.</p>
+                <!-- Email Input -->
+                <div class="form-group">
+                  <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                  <input type="email" name="EMAIL" class="required email form-control" id="mce-EMAIL" required="" value="">
+                  <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+                </div>
+                <!-- Response Messages -->
+                <div class="form-group">
+                  <div id="mce-responses" class="clear foot">
+                    <div class="response" id="mce-error-response" style="display: none;"></div>
+                    <div class="response" id="mce-success-response" style="display: none;"></div>
+                  </div>
+                  <!-- Hidden Input -->
+                  <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                    <input type="text" name="b_77485953b7bd0cae9849c6a5e_bd7ef7cf72" tabindex="-1" value="">
+                  </div>
+                </div>
+                <!-- Subscribe Button -->
+                <div class="form-group optionalParent">
+                  <div class="clear foot">
+                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary" value="Subscribe">
+                    <p style="margin: 0px auto;">
+                      <a href="http://eepurl.com/iw54l-" title="Mailchimp - email marketing made easy and fun">
+                        <span style="display: inline-block; background-color: transparent; border-radius: 4px;">
+                          <img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;">
+                        </span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-{% endblock %} -->
+  </div>
+{% endblock %}
+
+
