@@ -10,10 +10,11 @@ Welcome to Confident Smile, the go-to online store built with the Django web fra
 - [User Experience (UX)](#user-experience-ux)
   - [User Stories](#user-stories)
     - [EPIC | Product details and information](#epic--product-details-and-information)
-    - [EPIC | Shopping cart and chckout](#epic--shopping-cart-and-chckout)
+    - [EPIC | Shopping cart and checkout](#epic--shopping-cart-and-checkout)
     - [EPIC | Order management and analytics](#epic--order-management-and-analytics)
     - [EPIC | Product management](#epic--product-management)
     - [Epic: Customer suport and marketing](#epic-customer-suport-and-marketing)
+  - [The following user stories where labelled as "could have" and "Won't Have" on my project board on Github.](#the-following-user-stories-where-labelled-as-could-have-and-wont-have-on-my-project-board-on-github)
     - [EPIC | Order management and analytics](#epic--order-management-and-analytics-1)
     - [Epic: Customer suport and marketing](#epic-customer-suport-and-marketing-1)
     - [Colour Scheme](#colour-scheme)
@@ -45,48 +46,31 @@ The typical visitor to this webshop is an individual who is both health- and env
 ### User Stories
 
 #### EPIC | Product details and information
+ - As a customer, I want to view a variety of teeth whitening products that are organic and fluoride-free, so I can choose the one that best suits my needs
+ - As a customer, I want to view detailed product descriptions, including ingredients, benefits, and usage instructions, to make an informed decisions.
+ - As an administrator, I want to manage product inventory, including adding new products, updating product details, and removing discontinued items.
 
-1As a customer, I want to view a variety of teeth whitening products that are organic and fluoride-free, so I can choose the one that best suits my needs
-Epic: Product details and information
+#### EPIC | Shopping cart and checkout
+ - As a customer, I want to securely proceed to checkout and provide shipping and payment information to complete my purchase.
+ - As a customer, I want to receive confirmation emails with order details and shipment tracking information after making a purchase.
+ - As a customer, I want to create an account, which allows me to save my shipping addresses, track previous orders, and easily make future purchases.
 
-2As a customer, I want to view detailed product descriptions, including ingredients, benefits, and usage instructions, to make an informed decision
-Epic: Product details and information
-
-As an administrator, I want to manage product inventory, including adding new products, updating product details, and removing discontinued items.#6 Epic: Product details and information
-
-
-
-
-#### EPIC | Shopping cart and chckout
-
-As a customer, I want to securely proceed to checkout and provide shipping and payment information to complete my purchase.#7Epic: Shopping cart and chckout 
-
-As a customer, I want to receive confirmation emails with order details and shipment tracking information after making a purchase.#8
-Edit title
-
-As a customer, I want to create an account, which allows me to save my shipping addresses, track previous orders, and easily make future purchases.#9 Epic: Shopping cart and chckout 
-
-
-
-
-- 
 
 #### EPIC | Order management and analytics
-
  - As a customer, I want to add products to my cart and have the ability to adjust the quantities or remove items if needed. 
  - As an administrator, I want to have access to an admin panel where I can manage user accounts, and oversee overall website functionality. 
  
 
-
 #### EPIC | Product management 
-
  - As a customer, I want to search for specific teeth whitening products by name, category, or specific features. 
  - As a customer, I want to read reviews and ratings from other customers to help me make a more informed decision about a particular product.
 
-####  Epic: Customer suport and marketing 
 
+####  Epic: Customer suport and marketing 
  - As a customer, I want to receive promotional offers or discounts via email newsletters, providing me with incentives to make repeat purchases.
- - The following user stories where labelled as "could have" and "Won't Have" on my project board on Github.
+
+
+### The following user stories where labelled as "could have" and "Won't Have" on my project board on Github.
 
 #### EPIC | Order management and analytics
  - As an administrator, I want to generate sales reports and analytics to monitor the performance of the teeth whitening products and identify areas for improvement or marketing strategies.
@@ -94,7 +78,6 @@ As a customer, I want to create an account, which allows me to save my shipping 
 
 
 ####  Epic: Customer suport and marketing 
-
  - As a customer, I want to have access to a customer support contact or live chat feature to ask questions or get assistance with product selection or any issues I encounter.
 
 #### Colour Scheme
@@ -175,7 +158,6 @@ The 'get_object_or_404' function is used to handle object retrieval from the dat
  Not done whit this i have some error most related to the django.
 
 
-
 ### CSS
 
 The web app was Validate by URI [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) And it was no errors or warnings. See the images below.
@@ -189,7 +171,7 @@ The web app was Validate by URI [W3C CSS Validator](https://jigsaw.w3.org/css-va
 
 ### Javascript
 
-No errors were found, but One undefined variable "$". it belongsnd  jQuery library. [Jshint](https://jshint.com/) 
+7 Five warnings which seems to have with which version I have and the redden seems to be from the fact that they are baked into my django code
 
 <details>
 
@@ -200,9 +182,6 @@ No errors were found, but One undefined variable "$". it belongsnd  jQuery libra
 </details>
 
 ### Python
-
-7 Five warnings which seems to have with which version I have and the redden seems to be from the fact that they are baked into my django code
-
 
 <details>
 
