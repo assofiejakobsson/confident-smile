@@ -180,8 +180,8 @@ The web app was Validate by URI [W3C CSS Validator](https://jigsaw.w3.org/css-va
 
 ![Python](media/readme/python-linter-context.py.png)
 ![Python](media/readme/python-linter-urls.py.png)
-![Python](media/readme/linter-python-view-bagpy.png)
-![Python](media/readme/python-linte-admin-checkout.py.png)
+![Python](media/readme/python-linter-python-view-bag.py.png)
+![Python](media/readme/python-linter-admin-checkout.py.png)
 ![Python](media/readme/python-linter-checkout-models.py.png)
 ![Python](media/readme/python-linter-signal.py.png)
 
