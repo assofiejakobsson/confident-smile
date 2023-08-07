@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+sitemap: https://confident-smile-9920989d7786.herokuapp.com/sitemap.xml
