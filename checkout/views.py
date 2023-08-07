@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import(
+   render, redirect, reverse, get_object_or_404, HttpResponse 
+)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -13,7 +15,8 @@ import stripe
 import json
 
 
-# This view function is accessed with a POST request and caches the checkout data for a Stripe PaymentIntent.
+""" This view function is accessed with a POST request and caches 
+the checkout data for a Stripe PaymentIntent. """
 @require_POST
 def cache_checkout_data(request):
     try:

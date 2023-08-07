@@ -13,6 +13,8 @@ def update_on_save(sender, instance, created, **kwargs):
     instance.order.update_total()
 
 # Signal to update the order's total when an OrderLineItem is deleted
+
+
 @receiver(post_delete, sender=OrderLineItem)
 def update_on_save(sender, instance, **kwargs):
 
@@ -23,8 +25,7 @@ def update_on_save(sender, instance, **kwargs):
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     if created:
-        UserProfile.objects.get_or_create(user=instance) # Ensures only one profile is created
+        # Ensures only one profile is created
+        UserProfile.objects.get_or_create(user=instance)
         Wishlist.objects.create(user=instance.userprofile)
     instance.userprofile.save()
-
-
