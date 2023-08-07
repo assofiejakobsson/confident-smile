@@ -98,7 +98,7 @@ The colors are designed with ease of use in mind.
 ![Home Page](media/readme/homepage_wierframs.png)
 </details>
 
-<details>
+
 
 
 
@@ -162,28 +162,24 @@ The 'get_object_or_404' function is used to handle object retrieval from the dat
 
 The web app was Validate by URI [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) And it was no errors or warnings. See the images below.
 
-<summary>Css</summary>
-<details>
 
 ![W3C CSS Validator](media/readme/css_validator.png)
-</details>
+
 
 
 ### Javascript
 
 7 Five warnings which seems to have with which version I have and the redden seems to be from the fact that they are baked into my django code
 
-<details>
+
 
 <summary>Jshint</summary>
 
 ![Jshint](media/readme//stripe_elements.png)
 ![Jshint](media/readme/js-base.html.png)
-</details>
+
 
 ### Python
-
-<details>
 
 <summary>CI Python Linter</summary>
 
