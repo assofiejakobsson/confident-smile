@@ -17,11 +17,9 @@ Welcome to Confident Smile, the go-to online store built with the Django web fra
     - [Epic: Customer suport and marketing](#epic-customer-suport-and-marketing)
     - [EPIC | Order management and analytics](#epic--order-management-and-analytics-2)
     - [Epic: Customer suport and marketing](#epic-customer-suport-and-marketing-1)
-  - [User Stories](#user-stories-1)
     - [Colour Scheme](#colour-scheme)
 - [Wireframes](#wireframes)
 - [Agile Methodology](#agile-methodology)
-- [Data Model](#data-model)
 - [Security Features and Defensive Design](#security-features-and-defensive-design)
   - [User Authentication](#user-authentication)
   - [Database Security](#database-security)
@@ -89,14 +87,10 @@ The following user stories where labelled as "could have" and "Won't Have" on my
 - As a customer, I want to have access to a customer support contact or live chat feature to ask questions or get assistance with product selection or any issues I encounter.
 
 
-### User Stories
-
-![User story diagram](assets/readme/images/user_story_diagram.png)
-
 #### Colour Scheme
 <small><i><a href='https://coolors.co/ffffff-000000-98dff6-5fcafb-1ab2ff-0096ff-4176f8'>Colour palette from Coolors</a></i></small>
 
-![Colour Palette](media/readme/colour_palete.png)
+![Colour Palette](media/readme/colour palete.png)
 
 The colour scheme of the site is mainly linear-gradient. The rest is boostrap.
 
@@ -108,87 +102,52 @@ The colors are designed with ease of use in mind.
 
  <summary>Login Page</summary>
 
-![Login page](assets/readme/wireframes/login_page.png)
+![Home Page](media/readme/homepage_wierframs.png)
 </details>
 
 <details>
 
-<summary>Register Page</summary>
 
-![Register page](assets/readme/wireframes/register_page.png)
-</details>
-
-<details>
-
-<summary>Home Page</summary>
-
-![Home page](assets/readme/wireframes/home_page.png)
-</details>
-
-<details>
-
-<summary>Todo List Page</summary>
-
-![Todo list page](assets/readme/wireframes/todolist_page.png)
-</details>
-
-<details>
-
-<summary>View Page</summary>
-
-![View page](assets/readme/wireframes/view_page.png)
-</details>
-
-<details>
-
-<summary>Update Page</summary>
-
-![View page](assets/readme/wireframes/update_page.png)
-</details>
-
-<details>
-
-<summary>Delete Page</summary>
-
-![Delete page](assets/readme/wireframes/delete_page.png)
-</details>
 
 ## Agile Methodology
 
 Github projects was used to manage the development process using an agile approach. The link to my project board is [here.](https://github.com/users/assofiejakobsson/projects/28)
 
-## Data Model
-
-The diagram below details the database schema.
-
-![Database Schema](assets/readme/images/database_schema.png)
-
 
 ## Security Features and Defensive Design
 
 ### User Authentication
-- The CustomUserCreationForm class extends UserCreationForm and customizes the form's behavior.
- It adds validation for password length, checks for password match, and restricts the username to alphanumeric characters.
 
- - The CustomAuthenticationForm class extends AuthenticationForm and sets the required attribute for the username and password fields to True.
+User Authentication
 
- - The register view handles user registration. It uses the CustomUserCreationForm to process the registration form. If the form is valid, a new user is created, logged in, and redirected to the home page.
+Users are securely verified when they sign up and log in.
+User passwords are safely stored in a coded format to keep them secure.
+Users can log in using their social media accounts safely.
+Secure Form Submissions
 
- - The user_login view handles user login. It uses the CustomAuthenticationForm to authenticate the user.
- If the form is valid, the user is logged in and redirected to the to-do list page. If the form is invalid, an error message is displayed.
+Protection against unauthorized form submissions is in place.
+Password Reset
 
- - The user_logout view logs out the user using the logout function and redirects them to the home page.
- It also displays a success message using the messages framework.
+A secure process is used for resetting passwords.
+Custom User Data
 
- - The @login_required decorator is used for the most of the views to ensure that only authenticated users can access it.
- If an unauthenticated user tries to access the view, they will be redirected to the login page.
+User information is kept secure with a customized system.
+Encrypted Communication
 
- - The form classes (UserCreationForm, AuthenticationForm, and TodoForm) are for form validation. Django's form validation ensures that user input is validated and secure.
+Data transmission is encrypted to protect user information.
+Regular Updates
 
- - The CSRF tokens and middleware are built in django mechanisms. This are to handle CSRF protection and mitigate the risks associated with CSRF attacks.
+Frequent updates maintain security and stability.
+Security Checks
 
- - The 'get_object_or_404' function are for handle object retrieval from the database. This function retrieves an object but raises a 404 HTTP response if the object is not found.
-  This helps avoid exposing sensitive information or potential security vulnerabilities.
+Regular audits ensure adherence to the latest security standards.
+Responsible Reporting
+
+Encouraging responsible reporting of vulnerabilities for timely resolution.
+CSRF Protection and Object Retrieval:
+
+The CSRF tokens and middleware are built-in Django mechanisms to handle CSRF protection and mitigate the risks associated with CSRF attacks.
+The 'get_object_or_404' function is used to handle object retrieval from the database. This function retrieves an object but raises a 404 HTTP response if the object is not found. This helps avoid exposing sensitive information or potential security vulnerabilities.
 
 ### Database Security
 
