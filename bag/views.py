@@ -12,7 +12,8 @@ def view_bag(request):
 
 def add_to_bag(request, item_id):
     """
-    Adds a product to the shopping bag or updates its quantity if the product is already in the bag.
+    Adds a product to the shopping bag or updates its quantity if 
+    the product is already in the bag.
     """
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))

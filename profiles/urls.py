@@ -1,9 +1,9 @@
 from django.urls import path
 from . import views
 from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib.auth.decorators import login_required
-from .models import UserProfile, Wishlist
-from products.models import Product
+#from django.contrib.auth.decorators import login_required
+#from .models import UserProfile, Wishlist
+#from products.models import Product
 
 app_name = 'profiles'
 

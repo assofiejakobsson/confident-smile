@@ -5,33 +5,6 @@ from .models import UserProfile, Wishlist
 from .forms import UserProfileForm
 from products.models import Product 
 from checkout.models import Order
-from products.models import Product
-
-
-
-""" def profile(request):
-    
-    profile = get_object_or_404(UserProfile, user=request.user)
-
-    if request.method == 'POST':
-        form = UserProfileForm(request.POST, instance=profile)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Profile updated successfully')
-    else:
-        form = UserProfileForm(instance=profile)
-
-    orders = profile.orders.all()
-
-    template = 'profiles/profile.html'
-    context = {
-        'form': form,
-        'orders': orders,
-        'on_profile_page': True
-    }
-    
-
-    return render(request, template, context) """
 
 
 @login_required
@@ -104,57 +77,3 @@ def remove_from_wishlist(request, product_id):
     wishlist.products.remove(product)
     return redirect('profiles:view_wishlist')
 
-
-""" 
-@login_required
-def view_wishlist(request):
-    user_profile = UserProfile.objects.get(user=request.user)
-    wishlist = Wishlist.objects.get(user=user_profile)
-    return render(request, 'profiles/wishlist.html', {'wishlist': wishlist})
-
-@login_required
-def add_to_wishlist(request, product_id):
-    user_profile = UserProfile.objects.get(user=request.user)
-    wishlist = Wishlist.objects.get(user=user_profile)
-    product = get_object_or_404(Product, pk=product_id)
-    wishlist.products.add(product)
-    return redirect('profiles:view_wishlist')
-
-@login_required
-def remove_from_wishlist(request, product_id):
-    user_profile = UserProfile.objects.get(user=request.user)
-    wishlist = Wishlist.objects.get(user=user_profile)
-    product = get_object_or_404(Product, pk=product_id)
-    wishlist.products.remove(product)
-    return redirect('profiles:view_wishlist')
- """
-
-""" from django.shortcuts import render, get_object_or_404
-from django.contrib import messages
-from .models import UserProfile
-from .forms import UserProfileForm
-
-
-
-
-def profile(request):
-
-    # profile = get_object_or_404(UserProfile, user=request.user)
-
-    if request.method == 'POST':
-        form = UserProfileForm(request.POST, instance=profile)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Profile updated successfully')
-
-    form = UserProfileForm(instance=profile)
-    orders = profile.orders.all()
-
-    template = 'profiles/profile.html'
-    context = {
-        'form': form,
-        'orders': orders,
-        'on_profile_page': True
-    }
-
-    return render(request, template, context)    """ 
