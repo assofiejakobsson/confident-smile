@@ -159,14 +159,12 @@ The 'get_object_or_404' function is used to handle object retrieval from the dat
 
 ### HTML 
 
-The web app was Validate by URI [W3C HTML Validator](https://validator.w3.org/). And it was no errors or warnings. See the images below.
+![W3C HTML Validator]()
 
-<summary>Html</summary>
 
-<details>
+ Not done whit this i have some error most related to the django.
 
-![W3C HTML Validator](assets/readme/testing/html_checker.png)
-</details>
+
 
 ### CSS
 
@@ -177,6 +175,7 @@ The web app was Validate by URI [W3C CSS Validator](https://jigsaw.w3.org/css-va
 
 ![W3C CSS Validator](media/readme/css_validator.png)
 </details>
+
 
 ### Javascript
 
@@ -205,19 +204,13 @@ No errors were found, but One undefined variable "$". it belongsnd  jQuery libra
 ![Jshint](media/readme/python-linte-admin-checkout.py.png)
 ![Jshint](media/readme/python-linter-checkout-models.py.png)
 ![Jshint](media/readme/python-linte-signal.py.png)
-![Jshint](assets/readme/testing/accountapp_forms_py.png)
-![Jshint](assets/readme/testing/accountapp_apps_py.png)
-![Jshint](assets/readme/testing/accountapp_urls_py.png)
-![Jshint](assets/readme/testing/accountapp_view_py.png)
-![Jshint](assets/readme/testing/TheKingOfChores_settings_py.png)
-![Jshint](assets/readme/testing/TheKingOfChores_urls_py.png)
 </details>
 
 
 
 ### Lighthouse
 
-![Lighthouse](media/readme//lightouse.png)
+![Lighthouse](media/readme/lightouse.png)
 
 Lighthouse validation was run on all pages (both mobile and desktop) in order to check accessibility, performance, Best Practices and SEO. At first I received issues for my lables for name. And this is the result after I fixed it.
 
