@@ -8,6 +8,7 @@ Welcome to Confident Smile, the go-to online store built with the Django web fra
 - [**Live site    |    Repository**](#live-site--------repository)
 - [Table of Contents](#table-of-contents)
 - [User Experience (UX)](#user-experience-ux)
+- [Agile Methodology](#agile-methodology)
   - [User Stories](#user-stories)
     - [EPIC | Product details and information](#epic--product-details-and-information)
     - [EPIC | Shopping cart and checkout](#epic--shopping-cart-and-checkout)
@@ -19,7 +20,6 @@ Welcome to Confident Smile, the go-to online store built with the Django web fra
     - [Epic: Customer suport and marketing](#epic-customer-suport-and-marketing-1)
     - [Colour Scheme](#colour-scheme)
 - [Wireframes](#wireframes)
-- [Agile Methodology](#agile-methodology)
 - [Security Features and Defensive Design](#security-features-and-defensive-design)
   - [User Authentication](#user-authentication)
   - [Database Security](#database-security)
@@ -41,6 +41,11 @@ Welcome to Confident Smile, the go-to online store built with the Django web fra
 ## User Experience (UX)
 
 The typical visitor to this webshop is an individual who is both health- and environmentally-conscious, actively seeking quality products that reflect these values, and is willing to invest in organic and fluoride-free teeth whitening solutions to maintain a healthy and radiant smile.
+
+## Agile Methodology
+
+Github projects was used to manage the development process using an agile approach. The link to my project board is [here.](https://github.com/users/assofiejakobsson/projects/28)
+
 
 
 ### User Stories
@@ -93,18 +98,10 @@ The colors are designed with ease of use in mind.
 
 <details>
 
- <summary>Login Page</summary>
+ <summary>Home Page</summary>
 
 ![Home Page](media/readme/homepage_wierframs.png)
 </details>
-
-
-
-
-
-## Agile Methodology
-
-Github projects was used to manage the development process using an agile approach. The link to my project board is [here.](https://github.com/users/assofiejakobsson/projects/28)
 
 
 ## Security Features and Defensive Design
@@ -152,8 +149,6 @@ The 'get_object_or_404' function is used to handle object retrieval from the dat
 
 ### HTML 
 
-![W3C HTML Validator]()
-
 
  Not done whit this i have some error most related to the django.
 
@@ -189,13 +184,13 @@ The web app was Validate by URI [W3C CSS Validator](https://jigsaw.w3.org/css-va
 ![Jshint](media/readme/python-linte-admin-checkout.py.png)
 ![Jshint](media/readme/python-linter-checkout-models.py.png)
 ![Jshint](media/readme/python-linte-signal.py.png)
-</details>
+
 
 
 
 ### Lighthouse
 
-![Lighthouse](media/readme/lightouse.png)
+![Lighthouse](media/readme/lighthous.png)
 
 Lighthouse validation was run on all pages (both mobile and desktop) in order to check accessibility, performance, Best Practices and SEO. At first I received issues for my lables for name. And this is the result after I fixed it.
 
