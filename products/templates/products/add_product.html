@@ -1,13 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
 
 {% block content %}
     <div class="overlay"></div>
@@ -33,7 +26,6 @@
                         {% endif %}
                     {% endfor %} 
 
-                    <!-- {{ form | crispy }} -->
                     <div class="text-end"> 
                         <a class="btn btn-outline-black rounded-0" href="{% url 'products:products' %}">Cancel</a>
                         <button class="btn btn-black rounded-0" type="submit">Add Product</button>

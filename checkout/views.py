@@ -1,17 +1,3 @@
-""" from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
-from django.views.decorators.http import require_POST
-from django.contrib import messages
-from django.conf import settings
-from .forms import UserProfileForm
-
-from .forms import OrderForm
-from .models import Order, OrderLineItem
-from products.models import Product
-from profiles.models import UserProfile
-from bag.contexts import bag_contents
-
-import stripe
-import json """
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
@@ -27,22 +13,7 @@ import stripe
 import json
 
 
-
-""" from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
-from django.views.decorators.http import require_POST
-from django.contrib import messages
-from django.conf import settings
-from .forms import OrderForm
-from .models import Order, OrderLineItem
-from products.models import Product
-from profiles.models import UserProfile
-from profiles.forms import UserProfileForm
-from bag.contexts import bag_contents
-
-import stripe
-import json
- """
-
+# This view function is accessed with a POST request and caches the checkout data for a Stripe PaymentIntent.
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -55,13 +26,9 @@ def cache_checkout_data(request):
         })
         return HttpResponse(status=200)
     except Exception as e:
-        messages.error(request, 'Sorry, your payment cannot be \
-            processed right now. Please try again later.')
+        messages.error(request, 'Sorry, your payment cannot be processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
 
-
-""" def checkout_success(request, order_number):
-    print("Checkout success view executed!") """
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -69,7 +36,6 @@ def checkout(request):
 
     if request.method == 'POST':
         bag = request.session.get('bag', {})
-
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -99,18 +65,16 @@ def checkout(request):
                         )
                         order_line_item.save()
                 except Product.DoesNotExist:
-                    messages.error(request, (
-                        "We couldn't find one of the products in your bag in our database. "
-                        "Please contact us for assistance!")
-                    )
+                    messages.error(request, "We couldn't find one of the products in your bag in our database. "
+                                            "Please contact us for assistance!")
                     order.delete()
                     return redirect(reverse('bag'))
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout:checkout_success', args=[order.order_number]))
         else:
-            messages.error(request, 'There was an error with your form submission. \
-                Please double check your information.')
+            messages.error(request, 'There was an error with your form submission. '
+                                    'Please double check your information.')
     else:
         bag = request.session.get('bag', {})
         if not bag:
@@ -129,8 +93,8 @@ def checkout(request):
         order_form = OrderForm()
 
     if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing. \
-            Please contact us for assistance.')
+        messages.warning(request, 'Stripe public key is missing. '
+                                  'Please contact us for assistance.')
 
     template = 'checkout/checkout.html'
     context = {
@@ -147,8 +111,6 @@ def checkout_success(request, order_number):
     Handle successful checkouts
 
     """
-
-    
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
@@ -159,9 +121,10 @@ def checkout_success(request, order_number):
             # Log an error message here
             messages.error(request, 'UserProfile not found for the current user.')
             return redirect('some-error-page')
-            # Attach the user's profile to the order
-            order.user_profile = profile
-            order.save()
+
+        # Attach the user's profile to the order
+        order.user_profile = profile
+        order.save()
 
         # Save the user's info
         if save_info:
@@ -178,9 +141,9 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
+    messages.success(request, f'Order successfully processed! '
+                              f'Your order number is {order_number}. A confirmation '
+                              f'email will be sent to {order.email}.')
 
     if 'bag' in request.session:
         del request.session['bag']

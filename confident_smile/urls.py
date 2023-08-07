@@ -36,9 +36,3 @@ urlpatterns = [
 
 handler404 = 'confident_smile.views.handler404'
 
-""" urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),
-    path('', include('home.urls')),
-    path('products/', include('products.urls', namespace='products')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) """

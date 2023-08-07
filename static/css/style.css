@@ -1,11 +1,5 @@
-/* body {
-    background-color: aqua;
-    background: url('{% static "images/homepage_background.jpg" %}') no-repeat center center fixed; 
-} 
- */
-
+/* Set the background image and properties for the body */
 body {
-   
     background-image: linear-gradient(to top, #98dff6, #5fcafb, #1ab2ff, #0096ff, #4176f8);
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,6 +9,7 @@ body {
     min-height: 100vh;
 }
 
+/* Typography */
 h1, h2, h3, h4, a {
     font-family: 'Oswald', sans-serif;
     font-size: 24px;
@@ -25,36 +20,7 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
-footer {
-    margin-top: auto;    
-}
-
-footer a {
-    text-decoration: none !important;
-    color: inherit !important; 
-} 
-
-
-/* 
-#image-background-home {
-    background: url('{% static "images/homepage_background.jpg" %}') no-repeat center center fixed;  
-    background-color: aqua; 
-}   */
-
-/* a.category-badge > span.badge:hover {
-    background: #212529 !important;
-    color: #fff !important;
-}  */
-
-
-
-
-.shop-now-button {
-    
-    color: black;
-    min-width: 260px;
-}
-
+/* Buttons */
 .btn-black {
     background: black;
     color: white;
@@ -95,44 +61,16 @@ footer a {
     background: #000 !important;
 }
 
+/* Overlay and Messages */
 .overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
-}
-
-
-
-/* .btn btn-black rounded-0 {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
     background: white;
-    color: black !important; 
-    border: 1px solid black;
+    z-index: -1;
 }
-
-.btn btn-black rounded-0:hover,
-.btn btn-black rounded-0:active,
-.btn btn-black rounded-0:focus {
-    background: black;
-    color: white !important;
-}
-
-
-.btn-outline-black {
-    background: white;
-    color: black !important; 
-    border: 1px solid black;
-}
-
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: black;
-    color: white !important;
-} */
 
 .message-container {
     position: fixed;
@@ -148,7 +86,6 @@ footer a {
 .toast-capper {
     height: 2px;
 }
-
 
 .bag-notification-wrapper {
     height: 100px;
@@ -170,27 +107,21 @@ footer a {
     cursor: pointer;
 }
 
-/*mailchimp goes here */
-
-
-/* Adjust the form width based on the container size */
+/* Mailchimp Form Styling */
 #mc_embed_signup {
     max-width: 600px;
     margin: 0 auto;
 }
 
-/* Center the form header */
 #mc_embed_signup h2 {
     text-align: center;
 }
 
-/* Add spacing between form elements */
 #mc_embed_signup .form-group {
     margin-bottom: 15px;
     max-width: 300px;
 }
 
-/* Style the input field */
 #mc_embed_signup input[type="email"] {
     width: 100%;
     padding: 10px;
@@ -199,7 +130,6 @@ footer a {
     border: 1px solid #ccc;
 }
 
-/* Style the submit button */
 #mc_embed_signup input[type="submit"] {
     width: 100%;
     padding: 10px;
@@ -211,12 +141,10 @@ footer a {
     cursor: pointer;
 }
 
-/* Add some space around the subscribe button */
 #mc_embed_signup .optionalParent {
     margin-top: 15px;
 }
 
-/* Style the referral badge image */
 #mc_embed_signup .refferal_badge {
     width: 220px;
     height: 40px;
@@ -226,4 +154,12 @@ footer a {
     align-items: center;
 }
 
+/* Footer Styling */
+footer {
+    margin-top: auto;    
+}
 
+footer a {
+    text-decoration: none !important;
+    color: inherit !important; 
+}
