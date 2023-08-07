@@ -158,7 +158,7 @@ The 'get_object_or_404' function is used to handle object retrieval from the dat
 The web app was Validate by URI [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) And it was no errors or warnings. See the images below.
 
 
-![W3C CSS Validator](media/readme/css_validator.png)
+![W3C CSS Validator](media/readme/css-validator.png)
 
 
 
@@ -176,14 +176,14 @@ The web app was Validate by URI [W3C CSS Validator](https://jigsaw.w3.org/css-va
 
 ### Python
 
-<summary>CI Python Linter</summary>
+  CI Python Linter
 
-![Jshint](media/readme/python-linte-context.py.png)
-![Jshint](media/readme/python-linte-urls.py.png)
-![Jshint](media/readme/linter-python-view-bagpy.png)
-![Jshint](media/readme/python-linte-admin-checkout.py.png)
-![Jshint](media/readme/python-linter-checkout-models.py.png)
-![Jshint](media/readme/python-linte-signal.py.png)
+![Python](media/readme/python-linter-context.py.png)
+![Python](media/readme/python-linter-urls.py.png)
+![Python](media/readme/linter-python-view-bagpy.png)
+![Python](media/readme/python-linte-admin-checkout.py.png)
+![Python](media/readme/python-linter-checkout-models.py.png)
+![Python](media/readme/python-linte-signal.py.png)
 
 
 
