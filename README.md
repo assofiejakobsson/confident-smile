@@ -209,6 +209,10 @@ I am receiving this error message when I try to edit the account pages for login
 
 ![edit_error](media/readme/edit_error.png)
 
+I have now solved the bug above using tutor, was done a copy of the allauth files using the following command.
+
+![copy_allauth_command](media/readme/copy_allauth_command.png)
+
 
 I also have a bug in the order history, as it is only visible on the admin page and not on the profile page as it should be. I don't know why, as I haven't had a chance to look into it yet.
 

@@ -28,9 +28,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
+    '8000-assofiejako-confidentsm-u7dpispt60t.ws-eu104.gitpod.io',
     'confident-smile-9920989d7786.herokuapp.com',
     '8000-assofiejako-confidentsm-u7dpispt60t.ws-eu101.gitpod.io',
     '8000-assofiejako-confidentsm-u7dpispt60t.ws-eu102.gitpod.io',
@@ -85,7 +86,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
          'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'templates', 'allauth'),
+            os.path.join(BASE_DIR, 'templates', 'allauth_new'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
