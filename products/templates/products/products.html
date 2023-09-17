@@ -21,7 +21,7 @@
 
             <!-- Sort Dropdown -->
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="sortDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="sortDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">
                     Sort Products
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="sortDropdownButton">
@@ -55,8 +55,8 @@
                                 <p class="mb-0">{{ product.name }}</p>
                             </div>
                             <div class="card-footer bg-white pt-0 border-0 text-left">
-                                <button>
-                                    <a href="{% url 'profiles:add_to_wishlist' product.id %}">Add to wishlist</a>
+                                <button class="btn btn-primary">
+                                    <a class="text-white" href="{% url 'profiles:add_to_wishlist' product.id %}">Add to wishlist</a>
                                 </button>
                             </div>
                         </div>
@@ -68,7 +68,7 @@
 </div>
   
 <!-- Arrow-up button -->
-<div class="btt-button shadow-sm rounded-0 border border-black">
+<div class="btt-button shadow-sm rounded-0 color-black">
     <a class="btt-link d-flex h-100">
         <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
     </a>  

@@ -67,7 +67,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <!-- Button to decrement the quantity -->
-                                            <button class="decrement-qty btn btn-sm btn-black rounded-0" 
+                                            <button class="decrement-qty btn btn-sm btn btn-danger rounded-0" 
                                                 data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-minus fa-sm"></i>
@@ -81,7 +81,7 @@
                                             id="id_qty_{{ item.item_id }}">
                                         <div class="input-group-append">
                                             <!-- Button to increment the quantity -->
-                                            <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                            <button class="increment-qty btn btn-sm btn btn-primary rounded-0"
                                                 data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-plus fa-sm"></i>
@@ -93,7 +93,7 @@
                                 </div>
                             </form>
                             <!-- Link to update the quantity -->
-                            <a class="update-link text-info"><small>Update</small></a>
+                            <a class="update-link text-primary"><small>Update</small></a>
                             <!-- Link to remove the item from the bag -->
                             <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
                         </td>
@@ -115,17 +115,12 @@
                         <td colspan="5" class="text-right">
                             <!-- Button to continue shopping -->
                             <a href="{% url 'products:products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
+                                
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
                             <!-- Button to proceed to checkout -->
-                            <a href="{% url 'checkout:checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                            <a href="{% url 'checkout:checkout' %}" class="btn btn-primary rounded-0 btn-lg">
                                 <span class="text-uppercase">Secure Checkout</span>
-                                <span class="icon">
-                                    <i class="fas fa-lock"></i>
-                                </span>
                             </a>
                         </td>
                     </tr>
@@ -136,9 +131,6 @@
             <p class="lead mb-5">Your bag is empty.</p>
             <!-- Button to continue shopping -->
             <a href="{% url 'products:products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
                 <span class="text-uppercase">Keep Shopping</span>
             </a>
             {% endif %}
