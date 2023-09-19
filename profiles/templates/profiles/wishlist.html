@@ -15,7 +15,7 @@
     {% for product in wishlist.products.all %}
         <li>
             <h2>{{ product.name }}</h2>
-            <a href="{% url 'profiles:remove_from_wishlist' product.id %}" >Remove from wishlist</a>
+            <a href="{% url 'profiles:remove_from_wishlist' product.id %}" class="text-danger" >Remove from wishlist</a>
         </li>
     {% endfor %}
     </ul>
