@@ -29,4 +29,8 @@ class OrderAdmin(admin.ModelAdmin):
     ordering = ('-date',)
 
 
+    def save_related(self, request, form, formsets, change):
+            super().save_related(request, form, formsets, change)
+            form.instance.update_total()
+
 admin.site.register(Order, OrderAdmin)
