@@ -10,6 +10,7 @@ from products.models import Product
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from bag.contexts import bag_contents
+from django.core.mail import send_mail
 
 import stripe
 import json
@@ -147,6 +148,20 @@ def checkout_success(request, order_number):
     messages.success(request, f'Order successfully processed! '
                               f'Your order number is {order_number}. A confirmation '
                               f'email will be sent to {order.email}.')
+
+    try:
+        send_mail(
+            'Order Confirmation',  # subject
+            f'Thank you for your order! Your order number is: {order_number}',  # message
+            'from_email@example.com',  
+            [order.email],  
+        )
+    except Exception as e:
+        messages.warning(request, 'An error occurred while sending the confirmation email. However, your order has been processed successfully!')
+        
+
+
+
 
     if 'bag' in request.session:
         del request.session['bag']
