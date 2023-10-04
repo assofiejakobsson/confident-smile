@@ -19,11 +19,28 @@ Welcome to Confident Smile, the go-to online store built with the Django web fra
     - [EPIC | Order management and analytics](#epic--order-management-and-analytics-1)
     - [Epic: Customer suport and marketing](#epic-customer-suport-and-marketing-1)
     - [Colour Scheme](#colour-scheme)
+- [Facebook](#facebook)
 - [Wireframes](#wireframes)
 - [Security Features and Defensive Design](#security-features-and-defensive-design)
   - [User Authentication](#user-authentication)
   - [Database Security](#database-security)
 - [Testing](#testing)
+- [Manual Testing](#manual-testing)
+  - [Header](#header)
+  - [Product Mangement](#product-mangement)
+  - [Profile](#profile)
+  - [Wishlist](#wishlist)
+  - [Register page](#register-page)
+  - [Login page](#login-page)
+  - [Logout page](#logout-page)
+  - [Home page](#home-page)
+  - [Shoping page](#shoping-page)
+  - [Product page](#product-page)
+  - [Review page](#review-page)
+  - [Shopping bag](#shopping-bag)
+  - [Checkout page](#checkout-page)
+  - [Fotter](#fotter)
+  - [Admin page](#admin-page)
 - [Validator Testing](#validator-testing)
   - [HTML](#html)
   - [CSS](#css)
@@ -94,6 +111,14 @@ The colour scheme of the site is mainly linear-gradient. The rest is boostrap.
 
 The colors are designed with ease of use in mind. 
 
+## Facebook
+
+ <summary>Home Page</summary>
+
+![Facebook](media/readme/Facebook.png)
+</details>
+
+
 ## Wireframes
 
 <details>
@@ -144,6 +169,183 @@ The 'get_object_or_404' function is used to handle object retrieval from the dat
  - The database url and secret key are stored in the env.py file to prevent unwanted connections to the database.
 
 ## Testing
+
+## Manual Testing
+
+
+
+
+### Header
+| Element                | Action     | Expected Result                                                             | Pass/Fail |
+|------------------------|------------|-----------------------------------------------------------------------------|-----------|
+| Header                 |            |                                                                             |           |
+| Site Name (logo)       | Click      | Redirect to home                                                            | Pass      |
+| Register Link          | Click      | Visible when the user is not logged in and redirect to the register page.   | Pass      |
+| Log In Link            | Click      | Visible when the user is not logged in and redirect to the register page.   | Pass      |
+| Log Out Link           | Click      | Visible when the user is logged in and a confirm messages sign out pop up.  | Pass      |
+| Sign out               | Click      | Sing out Success message.                                                   | Pass      |
+| Seartch                | Click      | Redirect to the product that is entered.                                    | Pass      |
+| Shoppingbag            | Click      | Redirect to the shoppingbag page.                                           | Pass      |
+| My Account             | Click      | Dropdown menu.                                                              | Pass      |
+| Burger menu            | Click      | Dropdown menu (appears on smaller screens)                                  | Pass      |
+| Product mangement link     | Display      | If loggedin as admin                                           | Pass      |
+| Product mangement link             | Click      | Redirect to Product mangement page                                                              | Pass      |
+| Profile link           | Display      | If the user is loggedin                                | Pass      |
+| Profile  link          | Click      | redirect to the profile page                               | Pass      |
+| Wishlist link           | Display      | If the user is loggedin                                | Pass      |
+| Wishlist link            | Click      | redirect to the wishlist page page                               | Pass      |
+
+
+### Product Mangement
+| Element                | Action     | Expected Result                                                             | Pass/Fail |
+|------------------------|------------|-----------------------------------------------------------------------------|-----------|
+| Product Mangement                 |            |                                                                             |           |
+| Product Mangement        | Display      | Product form Whit inputfield for all product information and a fil uplode                                                           | Pass      |
+| Cancel btn         | Click      | Redirect to product page.   | Pass      |
+| Add Product btn            | Click      | If evrything is enterd correct the new product adds to the product page   | Pass      |
+
+
+
+### Profile
+| Element                | Action     | Expected Result                                                             | Pass/Fail |
+|------------------------|------------|-----------------------------------------------------------------------------|-----------|
+| Profile                 |            |                                                                             |           |
+| Profile        | Display      | User information and order history                                                            | Pass      |
+| Uppdate information btn         | Click      | The information enterd in the userinformation form uppdates and a success messages pop up  | Pass      |
+| Order number Link          | Click      | Redirect to order history details  | Pass      |
+| BACK TO PROFILE            | Click      | Redirect to profile  | Pass      |
+
+
+### Wishlist
+| Element                | Action     | Expected Result                                                             | Pass/Fail |
+|------------------------|------------|-----------------------------------------------------------------------------|-----------|
+| Wishlist                 |            |                                                                             |           |
+| Wishlist      | Display      | View wishlist                                                           | Pass      |
+| Remove from vishlist link          | Click      | The product was removed   | Pass      |
+| Add to wishlist btn            | Click      | Product added to the wishlist and the user redirect to the wishlist if the user is loggedin else it will redirekt to sign in  | Pass      |
+| SHOP NOW btn            | Click      | Redirect to shopping page   | Pass      |
+
+
+
+### Register page 
+| Element                | Action     | Expected Result                                                             | Pass/Fail |
+|------------------------|------------|-----------------------------------------------------------------------------|-----------|
+| Register page          |            |                                                                             |           |
+| Register form          | Display    | Inputfields for username, password, register btn. sign in link              | Pass      |
+| Register(btn)          | Click      | If everything is correct. The user get a messages to verify the email adress and a confirm messages on the email pop up.        | Pass      |
+| confirm email on the email             | Click      | Redirect to the websait whit a confirm message                                                 | Pass      |
+| confirm btn             | Click      | Redirect to the login page and a success messages for confirm the email pop up                                                | Pass      |
+
+
+### Login page 
+| Element                | Action     | Expected Result                                                             | Pass/Fail |
+|------------------------|------------|-----------------------------------------------------------------------------|-----------|
+| Login page             |            |                                                                             |           |
+| Login form             | Display    | sign up link, Inputfields for login, password, remember me checkbox, signe in btn. forgot password link                | Pass      |
+| sign in (btn)             | Click      |if the login information is correct, Redirects to the home page as logdein whit a success messages                                      | Pass      |
+| sign up lik          | Click      | Redirect to the register page                                               | Pass      |
+| forget password          | Click      | Redirect to resetpassword whit a confirm messages that we sent a email                                               | Pass      |
+| Reset passwor link on email          | Click    | Redirect to resetpassword whit input field for new password and a change btn              | Pass      |
+| change btn          | click    | If evrything is correct a confirm and success messages pop up              | Pass      |
+
+
+
+### Logout page 
+| Element                | Action     | Expected Result                                                             | Pass/Fail |
+|------------------------|------------|-----------------------------------------------------------------------------|-----------|
+| Logout page          |            |                                                                             |           |
+| Logout link          | Display    | If user are loggdein             | Pass      |
+| Logout link           | Click      |     Sign out messages pop out whit Sign Out btn to confirm if the user want to logout    | Pass      |
+| Sign Out btn             | Click      | Redirect to the home page as logged out whit a succes message                                                 | Pass      |
+                                               
+
+### Home page
+| Element                | Action     | Expected Result                                                             | Pass/Fail |
+|------------------------|------------|-----------------------------------------------------------------------------|-----------|
+| Home page              |            |                                                                             |           |
+| Welcome and About information      | Display    |                                                                             | Pass      |
+| Shop Now btn          | Click      | Redirect to the shopping page                                               | Pass      |
+| Subscribe btn          | Click      | It pop up a messages that says if the email are signe up to newsletter                                              | Pass      |
+
+
+### Shoping page
+| Element                | Action     | Expected Result                                                             | Pass/Fail |
+|------------------------|------------|-----------------------------------------------------------------------------|-----------|
+| Shoping page         |            |                                                                             |           |
+| Sort product         | Click      | Dropdown menu whit By price, rating, category or all products                                                   | Pass      |
+| By price link          | Click    | Then the cheapest product comes first                                     | Pass      |
+| By rating         | Click      | Then the products with the highest rating will come first                                                 | Pass      |
+| All products | Click      | Then all products come up                                                  | Pass      |
+| Product  | Click      | Redirect to the product page for details and add to buy                                                   | Pass      |
+
+
+### Product page 
+| Element                | Action     | Expected Result                                                             | Pass/Fail |
+|------------------------|------------|-----------------------------------------------------------------------------|-----------|
+| Product page              |            |                                                                             |           |
+| product details           | Display    | View products title, description, reviews.        | Pass      |
+| + - (btn)            | Click      | Press plus or minus to get the desired number of products                                                | Pass      |
+| ADD TO BAG(btn)              | Click      | The number of products user has chosen adds to the shoping bag and a success messaes pop up                                               | Pass      |
+| KEEP SHOPING(btn)            | Click      | Redirect to the shoping page                                                 | Pass      |
+| WRITE A REVIEW link              | Click      | If loggdein redirect to review page else login                                              | Pass      |
+| EDIT(btn)              | Click      | If loggde in  redirect to the product maneger else it will be no EDIT btn                                             | Pass      |
+| DELETE(btn)              | Click      | The product will be deleted if loggedin as admin else it will not be any delete btn                                             | Pass      |
+| GO TO SECURE CHECKOUT btn              | Click      | Redirect to the shoping bag.                                             | Pass      |
+
+
+### Review page 
+| Element                | Action     | Expected Result                                                             | Pass/Fail |
+|------------------------|------------|-----------------------------------------------------------------------------|-----------|
+| Review page              |            |                                                                             |           |
+| Review form           | Display    | inputfield for title an textarea for discription and a dropdown menu to rate fom 1-5        | Pass      |
+| Submit Review(btn)            | Click      | Redirect to the product page whit the new review                                                | Pass      |
+
+
+### Shopping bag 
+| Element                | Action     | Expected Result                                                             | Pass/Fail |
+|------------------------|------------|-----------------------------------------------------------------------------|-----------|
+| Shopping bag               |            |                                                                             |           |
+| Update link           | Click    | The added number of products will be updated         | Pass      |
+| Remove link            | Click      | The products will be removed from the shopping bag                                                 | Pass      |
+| KEEP SHOPPING(btn)              | Click      | Redirect to the todo list page                                              | Pass      |
+| + - (btn)            | Click      | Press plus or minus to get the desired number of products    | Pass      |
+| Secure Checkout           | Click    | Redirect to the checkout page         | Pass      |
+
+
+
+### Checkout page 
+| Element                | Action     | Expected Result                                                             | Pass/Fail |
+|------------------------|------------|-----------------------------------------------------------------------------|-----------|
+| Checkout page              |            |                                                                             |           |
+| Checkout page           | Display    | View the added products and a checkout form         | Pass      |
+| Complete Order(btn)            | Click      | If evrything is correct enterd thene it pop up a thank you and order detail and a success messages and a order conformation to the user email.                                                 | Pass      |
+| Adjust Bag(btn)              | Click      | Redirect to the shoppingbag                                              | Pass      |
+
+
+### Fotter
+| Element                | Action     | Expected Result                                                             | Pass/Fail |
+|------------------------|------------|-----------------------------------------------------------------------------|-----------|
+| Fotter                 |            |                                                                             |           |
+| Site Name (logo)       | Click      | Redirect to home                                                            | Pass      |
+| Contact information    | Display    | View contact info as email and Phone number and media                                | Pass      |
+| Privacy policy  link  | Click    | Redirect to privacy policy information                                | Pass      |
+| FAQS    | Click    | Redirect to FAQS page whit info about profile and password                               | Pass      |
+| Facebook icon    | Click    | Redirect to the facebookpage                               | Pass      |
+
+
+
+### Admin page 
+| Element                | Action     | Expected Result                                                             | Pass/Fail |
+|------------------------|------------|-----------------------------------------------------------------------------|-----------|
+| Admin page              |            |                                                                             |           |
+| Admin page            | Display    | As an inloggde admin I can access the admin page else I cant access it  | Pass      |
+| Users        | Click      | view all users, change as primary, verified, delete and add users                           | Pass      |
+| Orders          | Click      | Change order and delete order                                                             | Pass      |
+| Categories      | Click      | Add and delete categories                                                   | Pass      |
+| Products              | Click      | Add and delete products                                           | Pass      |
+| faqs          | Click      | Change, add or delete faqs                                                            | Pass      |
+
+
 
 ## Validator Testing
 

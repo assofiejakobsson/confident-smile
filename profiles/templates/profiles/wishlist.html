@@ -17,6 +17,12 @@
             <h2>{{ product.name }}</h2>
             <a href="{% url 'profiles:remove_from_wishlist' product.id %}" class="text-danger" >Remove from wishlist</a>
         </li>
+        <!-- Shop Now Button -->
+        <div class="my-5">
+            <h4>
+              <a href="{% url 'products:products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+            </h4>
+          </div>
     {% endfor %}
     </ul>
 {% else %}
