@@ -6,6 +6,6 @@ class FAQ(models.Model):
     question.short_description = 'FAQ Question'
     answer = models.TextField()
     answer.short_description = 'FAQ Answer'
-    
+
     def __str__(self):
         return self.question

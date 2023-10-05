@@ -27,15 +27,14 @@ class Product(models.Model):
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     rating = models.DecimalField(max_digits=3, decimal_places=1)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    
 
     def __str__(self):
-        return self.name 
-
+        return self.name
 
 
 class Review(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='reviews')
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name='reviews')
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     review_text = models.TextField()

@@ -9,15 +9,15 @@ from .models import Review
 from .forms import ReviewForm
 
 
-#This view displays a list of products with options for filtering, sorting, and searching based on user input.
+# This view displays a list of products with options for filtering, sorting,
+# and searching based on user input.
 def all_products(request):
-    
+
     products = Product.objects.all()
     query = None
     categories = None
     sort = None
     direction = None
-
 
     if request.GET:
         if 'sort' in request.GET:
@@ -26,7 +26,7 @@ def all_products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
-                #sp2
+                # sp2
             """ if sortkey == 'category':
                 sortkey = 'category__name' """
             if 'direction' in request.GET:
@@ -35,8 +35,6 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
-            
-            
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -45,10 +43,16 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request,
+                    "You didn't enter any search criteria!"
+                    ),
                 return redirect(reverse('products:products'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+
+            queries = Q(
+                 name__icontains=query) | Q(
+                     description__icontains=query
+                )
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -63,7 +67,7 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
-#This view retrieves a product with its associated reviews and
+# This view retrieves a product with its associated reviews and
 #  passes them to the 'product_detail.html' template for rendering.
 def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
@@ -77,8 +81,10 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
-#This view allows logged-in users to add reviews for a specific product using a form submission,
-#  and it redirects them to the product detail page after successfully adding the review.
+#  This view allows logged-in users to add reviews
+#  for a specific product using a form submission,
+#  and it redirects them to the product detail page
+#  after successfully adding the review.
 @login_required
 def add_review(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
@@ -91,9 +97,13 @@ def add_review(request, product_id):
             review.user = request.user
             review.save()
             messages.success(request, 'Successfully added review!')
-            return redirect(reverse('products:product_detail', args=[product.id]))
+            return redirect(reverse(
+                'products:product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add review. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add review. Please ensure the form is valid.'
+            )
     else:
         form = ReviewForm()
 
@@ -117,12 +127,16 @@ def add_product(request):
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('products:product_detail', args=[product.id]))
+            return redirect(reverse(
+                'products:product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add product. Please ensure the form is valid.'
+            )
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -131,9 +145,12 @@ def add_product(request):
     return render(request, template, context)
 
 
-#This  view allows logged-in superusers (store owners) to add new products using a form submission, and
-# it redirects them to the newly added product's detail page after successful addition.
-#  If the user is not a superuser, an error message is shown and redirected to the homepage.
+#  This  view allows logged-in superusers (store owners)
+#  to add new products using a form submission, and
+#  it redirects them to the newly added product's
+#  detail page after successful addition.
+#  If the user is not a superuser,
+#  an error message is shown and redirected to the homepage.
 @login_required
 def edit_product(request, product_id):
 
@@ -147,9 +164,12 @@ def edit_product(request, product_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('products:product_detail', args=[product.id]))
+            return redirect(reverse(
+                'products:product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update product. Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -162,14 +182,15 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
-
-
-#This view allows logged-in superusers (store owners) to delete a product identified by its product_id, and
+#  This view allows logged-in superusers (store owners) to delete
+#  a product identified by its product_id, and
 #  it redirects them to the products listing page after successful deletion.
-#  If the user is not a superuser, an error message is shown, and the user is redirected to the homepage.
+#  If the user is not a superuser,
+#  an error message is shown, and the user is redirected to the homepage.
+
+
 @login_required
 def delete_product(request, product_id):
-
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))

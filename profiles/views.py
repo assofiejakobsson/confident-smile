@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile, Wishlist
 from .forms import UserProfileForm
-from products.models import Product 
+from products.models import Product
 from checkout.models import Order
 
 
@@ -21,7 +21,10 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Update failed. Please ensure the form is valid.'
+                )
     else:
         form = UserProfileForm(instance=profile)
 
@@ -35,7 +38,6 @@ def profile(request):
     }
 
     return render(request, template, context)
-
 
 
 def order_history(request, order_number):
@@ -61,6 +63,7 @@ def view_wishlist(request):
     wishlist, created = Wishlist.objects.get_or_create(user=user_profile)
     return render(request, 'profiles/wishlist.html', {'wishlist': wishlist})
 
+
 @login_required
 def add_to_wishlist(request, product_id):
     user_profile = UserProfile.objects.get(user=request.user)
@@ -69,6 +72,7 @@ def add_to_wishlist(request, product_id):
     wishlist.products.add(product)
     return redirect('profiles:view_wishlist')
 
+
 @login_required
 def remove_from_wishlist(request, product_id):
     user_profile = UserProfile.objects.get(user=request.user)
@@ -76,4 +80,3 @@ def remove_from_wishlist(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     wishlist.products.remove(product)
     return redirect('profiles:view_wishlist')
-

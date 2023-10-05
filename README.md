@@ -352,7 +352,9 @@ The 'get_object_or_404' function is used to handle object retrieval from the dat
 ### HTML 
 
 
- Not done whit this i have some error most related to the django.
+ The web app was Validate by text input from source code [W3C HTML Validator](https://validator.w3.org/) And it was no errors or warnings. See the images below.
+
+ ![W3C HTML Validator](media/readme/html-validator.png)
 
 
 ### CSS
@@ -366,19 +368,21 @@ The web app was Validate by URI [W3C CSS Validator](https://jigsaw.w3.org/css-va
 
 ### Javascript
 
-7 Five warnings which seems to have with which version I have and the redden seems to be from the fact that they are baked into my django code
+5 Five warnings but no errors.
 
-
+<details>
 
 <summary>Jshint</summary>
 
 ![Jshint](media/readme//stripe_elements.png)
-![Jshint](media/readme/js-base.html.png)
-
+![Jshint](media/readme/js_base.html.png)
+</details>
 
 ### Python
 
-  CI Python Linter
+<details>
+
+  <summary>CI Python Linter</summary>
 
 ![Python](media/readme/python-linter-context.py.png)
 ![Python](media/readme/python-linter-urls.py.png)
@@ -386,7 +390,21 @@ The web app was Validate by URI [W3C CSS Validator](https://jigsaw.w3.org/css-va
 ![Python](media/readme/python-linter-admin-checkout.py.png)
 ![Python](media/readme/python-linter-checkout-models.py.png)
 ![Python](media/readme/python-linter-signal.py.png)
-
+![Python](media/readme/python-linter-form-checkout.py.png)
+![Python](media/readme/python-linter-url-checkout.py.png)
+![Python](media/readme/python-linter-view-checkout.py.png)
+![Python](media/readme/python-linter-checkout-webhooks.py.png)
+![Python](media/readme/python-linter-checkout-webhook_handler.py.png)
+![Python](media/readme/python-linter-products-forms.py.png)
+![Python](media/readme/python-linter-products-models.py.png)
+![Python](media/readme/python-linter-products-urls.py.png)
+![Python](media/readme/python-linter-products-view.py.png)
+![Python](media/readme/python-linter-products-widgets.py.png)
+![Python](media/readme/python-linter-profiles-form.py.png)
+![Python](media/readme/python-linter-profiles-models.py.png)
+![Python](media/readme/python-linter-profiles-urls.py.png)
+![Python](media/readme/python-linter-profiles-views.py.png)
+</details>
 
 
 

@@ -1,5 +1,5 @@
-from django.shortcuts import(
-   render, redirect, reverse, get_object_or_404, HttpResponse 
+from django.shortcuts import (
+   render, redirect, reverse, get_object_or_404, HttpResponse
 )
 from django.views.decorators.http import require_POST
 from django.contrib import messages
@@ -16,8 +16,10 @@ import stripe
 import json
 
 
-""" This view function is accessed with a POST request and caches 
+""" This view function is accessed with a POST request and caches
 the checkout data for a Stripe PaymentIntent. """
+
+
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -30,7 +32,15 @@ def cache_checkout_data(request):
         })
         return HttpResponse(status=200)
     except Exception as e:
-        messages.error(request, 'Sorry, your payment cannot be processed right now. Please try again later.')
+        messages.error(
+            request,
+
+            'Sorry, your payment cannot be processed right now.'
+
+            'Please try again later.'
+
+        )
+
         return HttpResponse(content=e, status=400)
 
 
@@ -69,16 +79,25 @@ def checkout(request):
                         )
                         order_line_item.save()
                 except Product.DoesNotExist:
-                    messages.error(request, "We couldn't find one of the products in your bag in our database. "
-                                            "Please contact us for assistance!")
+                    messages.error(
+                        request,
+                        "We couldn't find one of the products"
+                        "in your bag in our database. "
+                        "Please contact us for assistance!"
+                    )
                     order.delete()
                     return redirect(reverse('bag'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout:checkout_success', args=[order.order_number]))
+            return redirect(reverse(
+                'checkout:checkout_success', args=[order.order_number]))
         else:
-            messages.error(request, 'There was an error with your form submission. '
-                                    'Please double check your information.')
+            messages.error(
+                request,
+                'There was an error with your form submission.'
+                'Please double check your information.'
+            )
+
     else:
         bag = request.session.get('bag', {})
         if not bag:
@@ -123,7 +142,8 @@ def checkout_success(request, order_number):
             profile = UserProfile.objects.get(user=request.user)
         except UserProfile.DoesNotExist:
             # Log an error message here
-            messages.error(request, 'UserProfile not found for the current user.')
+            messages.error(
+                request, 'UserProfile not found for the current user.')
             return redirect('some-error-page')
 
         # Attach the user's profile to the order
@@ -146,22 +166,22 @@ def checkout_success(request, order_number):
                 user_profile_form.save()
 
     messages.success(request, f'Order successfully processed! '
-                              f'Your order number is {order_number}. A confirmation '
+                              f'Your order number is {order_number}.'
+                              'A confirmation '
                               f'email will be sent to {order.email}.')
 
     try:
         send_mail(
             'Order Confirmation',  # subject
-            f'Thank you for your order! Your order number is: {order_number}',  # message
-            'from_email@example.com',  
-            [order.email],  
+            f'Thank you for your order! Your order number is: {order_number}',
+            'from_email@example.com',
+            [order.email],
         )
     except Exception as e:
-        messages.warning(request, 'An error occurred while sending the confirmation email. However, your order has been processed successfully!')
-        
-
-
-
+        messages.warning(
+            request, 'An error occurred while sending the confirmation email.'
+            'However, your order has been processed successfully!'
+            )
 
     if 'bag' in request.session:
         del request.session['bag']
