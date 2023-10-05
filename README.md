@@ -25,7 +25,6 @@ Welcome to Confident Smile, the go-to online store built with the Django web fra
   - [User Authentication](#user-authentication)
   - [Database Security](#database-security)
 - [Testing](#testing)
-- [Manual Testing](#manual-testing)
   - [Header](#header)
   - [Product Mangement](#product-mangement)
   - [Profile](#profile)
@@ -113,7 +112,9 @@ The colors are designed with ease of use in mind.
 
 ## Facebook
 
- <summary>Home Page</summary>
+<details>
+
+ <summary>Facebook Page</summary>
 
 ![Facebook](media/readme/Facebook.png)
 </details>
@@ -170,7 +171,9 @@ The 'get_object_or_404' function is used to handle object retrieval from the dat
 
 ## Testing
 
-## Manual Testing
+<details>
+
+<summary>Manual Testing</summary>
 
 
 
@@ -345,7 +348,7 @@ The 'get_object_or_404' function is used to handle object retrieval from the dat
 | Products              | Click      | Add and delete products                                           | Pass      |
 | faqs          | Click      | Change, add or delete faqs                                                            | Pass      |
 
-
+</details>
 
 ## Validator Testing
 
@@ -354,16 +357,24 @@ The 'get_object_or_404' function is used to handle object retrieval from the dat
 
  The web app was Validate by text input from source code [W3C HTML Validator](https://validator.w3.org/) And it was no errors or warnings. See the images below.
 
- ![W3C HTML Validator](media/readme/html-validator.png)
+<details>
 
+<summary>HTML</summary>
+
+
+ ![W3C HTML Validator](media/readme/html-validator.png)
+</details>
 
 ### CSS
 
 The web app was Validate by URI [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) And it was no errors or warnings. See the images below.
 
+<details>
+
+<summary>CSS</summary>
 
 ![W3C CSS Validator](media/readme/css-validator.png)
-
+</details>
 
 
 ### Javascript
@@ -433,12 +444,10 @@ I have now solved the bug above using tutor, was done a copy of the allauth file
 
 ![copy_allauth_command](media/readme/copy_allauth_command.png)
 
-
-I also have a bug in the order history, as it is only visible on the admin page and not on the profile page as it should be. I don't know why, as I haven't had a chance to look into it yet.
+The only problem left is that i cant delete the old allauth.
 
 My favicon is not showing, and that's because I uploaded it as a zip file in my bucket on Amazon. I haven't had a chance to fix this yet.
 
-I am also missing some CSS due to a lack of time, so it's not a bug
 
 ## Deploy the App to Heroku
 
